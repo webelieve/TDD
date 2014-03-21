@@ -1,0 +1,14 @@
+# Ignore specific files
+.DS_Store
+clientdb.xml
+
+# Use wildcards as well
+*~
+*.swp
+
+# Ignore all directories and files in a directory.
+target/
+.settings/
+.metadata/
+.git/
+RemoteSystemsTempFiles/
