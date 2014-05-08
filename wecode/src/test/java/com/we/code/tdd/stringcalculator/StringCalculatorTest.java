@@ -56,14 +56,14 @@ public class StringCalculatorTest {
 	}
 	
 	@Test
-	public void testNewlinesInString() {
+	public void shouldSumWhentNewlinesInString() {
 		String numbers = "1\n2,3";
 		int result = calculator.add(numbers);
 		assertEquals(6, result);
 	}
 	
 	@Test
-	public void testAllDelimiters() {
+	public void shouldSumWithAnyDelimitersInString() {
 		String numbers = " 1\n2,|3,%^ *0#";
 		int result = calculator.add(numbers);
 		assertEquals(6, result);
