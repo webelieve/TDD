@@ -7,11 +7,14 @@ public class StringCalculator {
 			return 0;
 		}
 		
-		String[] array = numbers.split(",");
+		String[] array = numbers.split("[^0-9]");
 		
 		int result = 0;
 		
 		for(String number : array) {
+			if (number.isEmpty()) {
+				continue;
+			}
 			result += Integer.parseInt(number);
 		}
 		
