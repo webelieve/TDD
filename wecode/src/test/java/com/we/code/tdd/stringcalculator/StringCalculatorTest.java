@@ -3,11 +3,18 @@ package com.we.code.tdd.stringcalculator;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
+
+import com.we.code.tdd.stringcalculator.exception.NegativeNumberException;
 
 public class StringCalculatorTest {
 	
 	private StringCalculator calculator;
+	
+	@Rule
+	public ExpectedException negativeNumberException = ExpectedException.none();
 	
 	@Before
 	public void setUp() {
@@ -67,6 +74,13 @@ public class StringCalculatorTest {
 		String numbers = " 1\n2,|3,%^ *0#";
 		int result = calculator.add(numbers);
 		assertEquals(6, result);
+	}
+	
+	@Test
+	public void shouldThrowExceptionOnNegativeNumbers() {
+		String numbers = "1, #$-2^3";
+		negativeNumberException.expect(NegativeNumberException.class);       
+		calculator.add(numbers);		
 	}
 
 }
