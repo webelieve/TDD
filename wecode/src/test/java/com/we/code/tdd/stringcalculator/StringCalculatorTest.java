@@ -21,7 +21,7 @@ public class StringCalculatorTest {
 		calculator = new StringCalculator();
     }
 	
-/*	Given/Then/When style!
+/*	Given/When/Then style!
     @Test
 	public void emptyStringShouldReturnZero() {
 		givenAnEmptyString();
