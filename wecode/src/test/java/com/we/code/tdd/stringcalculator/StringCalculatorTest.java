@@ -87,7 +87,7 @@ public class StringCalculatorTest {
 	public void shouldDisplayAllNegativeNumbersInExceptionMessage() {
 		String numbers = "1, #$-2^-3";
 		negativeNumberException.expect(NegativeNumberException.class);       
-		negativeNumberException.expectMessage("Negative not allowed: | -2 | | -3 |");	
+		negativeNumberException.expectMessage("Negative not allowed: -2 -3 ");	
 		calculator.add(numbers);	
 	}
 

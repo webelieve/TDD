@@ -50,9 +50,7 @@ public class StringCalculator {
 			}
 			
 			if (Integer.parseInt(number) < 0) {
-				negativeNumbers.append(" | ");
-				negativeNumbers.append(number);
-				negativeNumbers.append(" | ");
+				negativeNumbers.append(number).append(" ");
 			}
 
 		}
