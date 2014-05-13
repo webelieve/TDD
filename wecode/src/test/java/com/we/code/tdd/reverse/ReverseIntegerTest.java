@@ -25,7 +25,7 @@ public class ReverseIntegerTest {
 	public void testMoreThanOneDigitPositiveNumber() {
 		int number = 234;
 		int result = reverse.reverse(number);
-		assertEquals(-432, result);
+		assertEquals(432, result);
 	}
 	
 	@Test
@@ -40,6 +40,13 @@ public class ReverseIntegerTest {
 		int number = -234;
 		int result = reverse.reverse(number);
 		assertEquals(-432, result);
+	}
+	
+	@Test
+	public void testZeroLeadingDigitNumber() {
+		int number = 200;
+		int result = reverse.reverse(number);
+		assertEquals(2, result);
 	}
 
 }
