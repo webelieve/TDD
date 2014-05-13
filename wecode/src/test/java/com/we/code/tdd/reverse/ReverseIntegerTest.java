@@ -48,5 +48,12 @@ public class ReverseIntegerTest {
 		int result = reverse.reverse(number);
 		assertEquals(2, result);
 	}
+	
+	@Test
+	public void testOverFlowNumber() {
+		int number = 1000000003;
+		int result = reverse.reverse(number);
+		assertEquals(Integer.MAX_VALUE, result);
+	}
 
 }

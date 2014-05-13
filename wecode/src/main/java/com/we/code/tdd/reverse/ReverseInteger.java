@@ -25,7 +25,14 @@ public class ReverseInteger {
 			}
 		}
 
-		return Integer.parseInt(new String(reversed));
+		long result = Long.parseLong(new String(reversed));
+		int intResult = 0;
+				
+		if (result > Integer.MAX_VALUE) {
+			intResult = Integer.MAX_VALUE;
+		}
+
+		return intResult;
 	}
 
 }
