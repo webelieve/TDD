@@ -6,9 +6,7 @@ public class Median {
 
 	public double findMedianSortedArrays(int[] array1, int[] array2) {
 		double medianNumber = 0.0;
-		
-//		int length = array1.length + array2.length;
-		
+				
 		int[] array1and2 = new int[array1.length + array2.length];
 		System.arraycopy(array1, 0, array1and2, 0, array1.length);
 		System.arraycopy(array2, 0, array1and2, array1.length, array2.length);

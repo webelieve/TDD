@@ -25,7 +25,7 @@ public class MedianTest2 {
 	}
 	
 	@Test
-	public void oldNumberElementsTest() {
+	public void oodNumberElementsTest() {
 		int[] array1 = new int[]{1, 2, 3, 4};
 		int[] array2 = new int[]{6, 7, 8};
 		
@@ -34,4 +34,13 @@ public class MedianTest2 {
 		assertEquals(4, medianNum, 1);
 	}
 	
+	@Test
+	public void oddNewNumberElementsTest() {
+		int[] array1 = new int[]{1, 2, 3, 5};
+		int[] array2 = new int[]{4, 7, 8};
+		
+		double medianNum = median.findMedianSortedArrays(array1, array2);
+		
+		assertEquals(4, medianNum, 1);
+	}
 }
