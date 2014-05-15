@@ -43,4 +43,14 @@ public class MedianTest {
 		
 		assertEquals(4, medianNum, 1);
 	}
+	
+	@Test
+	public void evenNewNumberElementsTest() {
+		int[] array1 = new int[]{41, 42, 43, 74, 83};
+		int[] array2 = new int[]{3, 6, 10, 25, 53, 76, 78, 84, 95};
+		
+		double medianNum = median.findMedianSortedArrays(array1, array2);
+		
+		assertEquals(48, medianNum, 1);
+	}
 }

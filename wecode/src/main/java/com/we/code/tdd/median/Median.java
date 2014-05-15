@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class Median {
 
+	/*
+	 * Time complexity: O(nxn)
+	 */
 	public double findMedianSortedArrays(int[] array1, int[] array2) {
 		double medianNumber = 0.0;
 				
@@ -11,7 +14,7 @@ public class Median {
 		System.arraycopy(array1, 0, array1and2, 0, array1.length);
 		System.arraycopy(array2, 0, array1and2, array1.length, array2.length);
 				
-		Arrays.sort(array1);
+		Arrays.sort(array1and2);
 		
 		int extendedLength = array1and2.length + 1;
 		double medianIndex = Math.floor(extendedLength/2);
@@ -28,5 +31,10 @@ public class Median {
 		
 		return medianNumber;
 	}
+	
+	/*
+	 * Time complexity: O(log(n))
+	 */
+
 
 }
